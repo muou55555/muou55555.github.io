@@ -5,28 +5,28 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://muou55555.github.io/</loc>
-<lastmod>2016-01-11T17:54:46-00:00</lastmod>
+<lastmod>2016-01-11T23:15:31-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://muou55555.github.io/archives.html</loc>
-<lastmod>2016-01-11T17:54:46-00:00</lastmod>
+<lastmod>2016-01-11T23:15:31-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://muou55555.github.io/tags.html</loc>
-<lastmod>2016-01-11T17:54:46-00:00</lastmod>
+<lastmod>2016-01-11T23:15:31-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://muou55555.github.io/categories.html</loc>
-<lastmod>2016-01-11T17:54:46-00:00</lastmod>
+<lastmod>2016-01-11T23:15:31-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -39,20 +39,6 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
-<loc>https://muou55555.github.io/content/articles/2016/01/25/test/</loc>
-<lastmod>2015-01-25T10:20:00+08:00</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.7</priority>
-</url>
-
-<url>
-<loc>https://muou55555.github.io/content/articles/2016/01/25/test02/</loc>
-<lastmod>2015-01-25T10:20:00+08:00</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.7</priority>
-</url>
-
-<url>
 <loc>https://muou55555.github.io/content/articles/2016/01/11/TerminalTool/</loc>
 <lastmod>2016-01-11T15:32:00+08:00</lastmod>
 <changefreq>monthly</changefreq>
@@ -60,29 +46,8 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
-<loc>https://muou55555.github.io/content/articles/2015/12/21/embeddedstudy1/</loc>
-<lastmod>2015-12-21T18:06:00+08:00</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.7</priority>
-</url>
-
-<url>
-<loc>https://muou55555.github.io/content/articles/2015/12/21/life01/</loc>
-<lastmod>2015-12-21T18:06:00+08:00</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.7</priority>
-</url>
-
-<url>
-<loc>https://muou55555.github.io/content/articles/2015/12/21/life02/</loc>
-<lastmod>2015-12-21T18:06:00+08:00</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.7</priority>
-</url>
-
-<url>
-<loc>https://muou55555.github.io/content/articles/2015/12/21/testpython1/</loc>
-<lastmod>2015-12-21T18:06:00+08:00</lastmod>
+<loc>https://muou55555.github.io/content/articles/2016/01/10/Study/</loc>
+<lastmod>2016-01-10T10:20:00+08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
@@ -95,27 +60,6 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
-<loc>https://muou55555.github.io/category/life/</loc>
-<lastmod>2015-12-21T18:06:00+08:06</lastmod>
-<changefreq>daily</changefreq>
-<priority>0.5</priority>
-</url>
-
-<url>
-<loc>https://muou55555.github.io/category/test/</loc>
-<lastmod>2016-01-25T10:20:00+08:06</lastmod>
-<changefreq>daily</changefreq>
-<priority>0.5</priority>
-</url>
-
-<url>
-<loc>https://muou55555.github.io/tag/test/</loc>
-<lastmod>2016-01-25T10:20:00+08:06</lastmod>
-<changefreq>daily</changefreq>
-<priority>0.5</priority>
-</url>
-
-<url>
 <loc>https://muou55555.github.io/tag/python/</loc>
 <lastmod>2016-01-11T15:32:00+08:06</lastmod>
 <changefreq>daily</changefreq>
@@ -123,29 +67,15 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
-<loc>https://muou55555.github.io/tag/basketball/</loc>
-<lastmod>2015-12-21T18:06:00+08:06</lastmod>
-<changefreq>daily</changefreq>
-<priority>0.5</priority>
-</url>
-
-<url>
-<loc>https://muou55555.github.io/tag/football/</loc>
-<lastmod>2015-12-21T18:06:00+08:06</lastmod>
-<changefreq>daily</changefreq>
-<priority>0.5</priority>
-</url>
-
-<url>
-<loc>https://muou55555.github.io/tag/embedded/</loc>
-<lastmod>2015-12-21T18:06:00+08:06</lastmod>
+<loc>https://muou55555.github.io/tag/study/</loc>
+<lastmod>2016-01-10T10:20:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://muou55555.github.io/author/muou/</loc>
-<lastmod>2016-01-25T10:20:00+08:06</lastmod>
+<lastmod>2016-01-11T15:32:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>

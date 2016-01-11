@@ -28,7 +28,7 @@
 
 &lt;h3&gt;二、pymenu&lt;/h3&gt;
 &lt;p&gt;&lt;code&gt;功能说明&lt;/code&gt;：表格菜单类，支持按行增加内容；支持多列；支持缺省列时补空；支持多级子菜单；支持退出确认机制；支持自定义菜单功能实现&lt;/p&gt;
-&lt;h3&gt;2.1 使用方法&lt;/h3&gt;
+&lt;h4&gt;2.1 使用方法&lt;/h4&gt;
 &lt;p&gt;1、初始化pymenu&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;main_menu&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;Pymenu&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;Main Menu&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;20&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;20&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;20&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt; &lt;span class="n"&gt;back_key&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;q&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
@@ -48,4 +48,4 @@
 
 &lt;h3&gt;DEMO界面&lt;/h3&gt;
 &lt;p&gt;pymenu和pytable界面
-&lt;img alt="TerminalToolExample.png" src="/images/Python/TerminalToolExample.png" /&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">muou</dc:creator><pubDate>Mon, 11 Jan 2016 15:32:00 +0800</pubDate><guid>tag:muou55555.github.io,2016-01-11:content/articles/2016/01/11/TerminalTool/</guid><category>Python</category></item><item><title>Python study</title><link>https://muou55555.github.io/content/articles/2015/12/21/testpython1/</link><description>&lt;p&gt;Development Python testpython1&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">muou</dc:creator><pubDate>Mon, 21 Dec 2015 18:06:00 +0800</pubDate><guid>tag:muou55555.github.io,2015-12-21:content/articles/2015/12/21/testpython1/</guid><category>Python</category></item></channel></rss>
+&lt;img alt="TerminalToolExample.png" src="/images/Python/TerminalToolExample.png" /&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">muou</dc:creator><pubDate>Mon, 11 Jan 2016 15:32:00 +0800</pubDate><guid>tag:muou55555.github.io,2016-01-11:content/articles/2016/01/11/TerminalTool/</guid><category>Python</category></item></channel></rss>

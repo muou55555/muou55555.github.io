@@ -13,9 +13,9 @@ body{
  
 }
 .sitename_desc {
-	color: #A9A9A9;
+	color: #038d07; /*color: #A9A9A9;*/
 	font-family:ËÎÌו
-	font-weight:bold;
+	font-weight:bolder;
   font-style:oblique; /*italic */
   font-size:14px
 }
