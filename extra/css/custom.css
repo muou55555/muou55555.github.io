@@ -2,7 +2,7 @@
 body{
 	/*
 	margin-top:50px;
-	background-color: #152d27;*/
+	background-color: #303030;*/
 	}
 .navbar-default .navbar-brand {
   color: #F0F0F0;
@@ -22,6 +22,16 @@ body{
 	
 .container {
 	color:#FFFFFF	
+}
+
+.profile_pic {
+    background-size: 32px 32px;
+    border-radius: 50%;
+    display: block;
+    margin: 0px 0px 0px 0px;
+    height: 32px;
+    width: 32px;
+    float: left;
 }
 
 
