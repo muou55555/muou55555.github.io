@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>木 偶</title><link>https://muou55555.github.io/</link><description>Software development and architecture blog</description><atom:link href="https://muou55555.github.io/feed/category/development.rss" rel="self"></atom:link><lastBuildDate>Tue, 12 Jan 2016 22:25:00 +0800</lastBuildDate><item><title>利用libnet进行TCP会话劫持</title><link>https://muou55555.github.io/content/articles/2016/01/12/tcphijack/</link><description>&lt;h3&gt;相关知识&lt;/h3&gt;
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>木 偶</title><link>https://muou55555.github.io/</link><description>Software development and architecture blog</description><atom:link href="https://muou55555.github.io/feed/tag/http.rss" rel="self"></atom:link><lastBuildDate>Tue, 12 Jan 2016 22:25:00 +0800</lastBuildDate><item><title>利用libnet进行TCP会话劫持</title><link>https://muou55555.github.io/content/articles/2016/01/12/tcphijack/</link><description>&lt;h3&gt;相关知识&lt;/h3&gt;
 &lt;p&gt;会话劫持（Session Hijack）: 就是结合了嗅探以及欺骗技术在内的攻击手段。例如，在一次正常的会话过程当中，攻击者作为第三方参与到其中，他可以在正常数据包中插入恶意数据，也可以在双方的会话当中进行监听，甚至可以是代替某一方主机接管会话。
 &lt;br&gt;
 可以把会话劫持攻击分为两种类型:&lt;/p&gt;
@@ -85,57 +85,4 @@ TCP协议的注射式会话劫持，攻击者应先采用嗅探技术对目标�
 
 &lt;h3&gt;结束语&lt;/h3&gt;
 &lt;p&gt;只有在了解别人攻击手段之后，我们才能做好网络安全的防范措施。&lt;br&gt;
-后续会在研究https会话劫持技术&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">muou</dc:creator><pubDate>Tue, 12 Jan 2016 22:25:00 +0800</pubDate><guid>tag:muou55555.github.io,2016-01-12:content/articles/2016/01/12/tcphijack/</guid><category>Http</category><category>Tcp</category></item><item><title>基于python开发TerminalTool</title><link>https://muou55555.github.io/content/articles/2016/01/11/TerminalTool/</link><description>&lt;h2&gt;项目概述&lt;/h2&gt;
-&lt;p&gt;基于python语言开发，表格式终端命令菜单，会在此菜单上添加嵌入式开发中经常用到的工具类方法。目前按业务控制功能、视图、通用包进行分类。
-目前此项目已开源，开源地址访问：&lt;br /&gt;
-&lt;br&gt;&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;&lt;a href="https://github.com/muou55555/TerminalTool"&gt;https://github.com/muou55555/TerminalTool&lt;/a&gt;   &lt;/p&gt;
-&lt;h3&gt;一、pytable&lt;/h3&gt;
-&lt;p&gt;&lt;code&gt;功能说明&lt;/code&gt;：表格类，支持按行增加内容；支持多列；支持缺省列时补空；运行是否显示表格标题&lt;/p&gt;
-&lt;h4&gt;1.1 使用方法&lt;/h4&gt;
-&lt;p&gt;1、初始化pytable&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;a&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;Pytable&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;Table Title&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;60&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;20&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;30&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;2、显示表标题&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;add_table_header&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;3、添加行数据&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;add_row_data&lt;/span&gt;&lt;span class="p"&gt;([&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;1 - Home&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;2 - Telnet&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;3 - SSH&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;4、显示表格&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;show&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;h3&gt;二、pymenu&lt;/h3&gt;
-&lt;p&gt;&lt;code&gt;功能说明&lt;/code&gt;：表格菜单类，支持按行增加内容；支持多列；支持缺省列时补空；支持多级子菜单；支持退出确认机制；支持自定义菜单功能实现&lt;/p&gt;
-&lt;h4&gt;2.1 使用方法&lt;/h4&gt;
-&lt;p&gt;1、初始化pymenu&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;main_menu&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;Pymenu&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;Main Menu&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;20&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;20&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;20&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt; &lt;span class="n"&gt;back_key&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;q&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;2、添加行数据&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;main_menu&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;add_field&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;1&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;Telnet&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="k"&gt;lambda&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="n"&gt;fun&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;Telnet&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
-&lt;span class="n"&gt;main_menu&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;add_field&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;4&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;SSH&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;fun_test&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="n"&gt;main_menu&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;add_field&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;b&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;sub b&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="bp"&gt;None&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;3、显示菜单&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;main_menu&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;show&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;h3&gt;DEMO界面&lt;/h3&gt;
-&lt;p&gt;pymenu和pytable界面
-&lt;img alt="TerminalToolExample.png" src="/images/Python/TerminalToolExample.png" /&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">muou</dc:creator><pubDate>Mon, 11 Jan 2016 15:32:00 +0800</pubDate><guid>tag:muou55555.github.io,2016-01-11:content/articles/2016/01/11/TerminalTool/</guid><category>Python</category></item><item><title>Learning links</title><link>https://muou55555.github.io/content/articles/2016/01/10/Study/</link><description>&lt;p&gt;&lt;a href="http://www.embeddedlog.com"&gt;http://www.embeddedlog.com&lt;/a&gt;&lt;br&gt;&lt;br&gt;
-&lt;a href="http://kentwills.github.io"&gt;http://kentwills.github.io&lt;/a&gt;&lt;br&gt;&lt;br&gt;
-&lt;a href="http://rjweiss.github.io"&gt;http://rjweiss.github.io&lt;/a&gt;&lt;br&gt;&lt;br&gt;
-&lt;a href="https://github.com/DandyDev"&gt;https://github.com/DandyDev&lt;/a&gt;&lt;br&gt;&lt;br&gt;
-&lt;a href="http://www.oschina.net"&gt;oschina&lt;/a&gt;&lt;br&gt;&lt;br&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">muou</dc:creator><pubDate>Sun, 10 Jan 2016 10:20:00 +0800</pubDate><guid>tag:muou55555.github.io,2016-01-10:content/articles/2016/01/10/Study/</guid><category>Study</category></item></channel></rss>
+后续会在研究https会话劫持技术&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">muou</dc:creator><pubDate>Tue, 12 Jan 2016 22:25:00 +0800</pubDate><guid>tag:muou55555.github.io,2016-01-12:content/articles/2016/01/12/tcphijack/</guid><category>Http</category><category>Tcp</category></item></channel></rss>

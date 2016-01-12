@@ -1,5 +1,91 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>木 偶</title><link>https://muou55555.github.io/</link><description>Software development and architecture blog</description><atom:link href="https://muou55555.github.io/feed/index.rss" rel="self"></atom:link><lastBuildDate>Mon, 11 Jan 2016 15:32:00 +0800</lastBuildDate><item><title>基于python开发TerminalTool</title><link>https://muou55555.github.io/content/articles/2016/01/11/TerminalTool/</link><description>&lt;h2&gt;项目概述&lt;/h2&gt;
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>木 偶</title><link>https://muou55555.github.io/</link><description>Software development and architecture blog</description><atom:link href="https://muou55555.github.io/feed/index.rss" rel="self"></atom:link><lastBuildDate>Tue, 12 Jan 2016 22:25:00 +0800</lastBuildDate><item><title>利用libnet进行TCP会话劫持</title><link>https://muou55555.github.io/content/articles/2016/01/12/tcphijack/</link><description>&lt;h3&gt;相关知识&lt;/h3&gt;
+&lt;p&gt;会话劫持（Session Hijack）: 就是结合了嗅探以及欺骗技术在内的攻击手段。例如，在一次正常的会话过程当中，攻击者作为第三方参与到其中，他可以在正常数据包中插入恶意数据，也可以在双方的会话当中进行监听，甚至可以是代替某一方主机接管会话。
+&lt;br&gt;
+可以把会话劫持攻击分为两种类型:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;中间人攻击(Man In The Middle，简称MITM)&lt;/li&gt;
+&lt;li&gt;注射式攻击（Injection）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;既然是进行TCP劫持，则先要对TCP/IP协议相关知识有个初步的了解。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;TCP/IP数据封装&lt;br&gt;
+&lt;div&gt; 
+&lt;img style="border-radius: 1%; display: block;" width = "350px" height = "350px" src="/images/http/tcpipdata.png" alt="1"/&gt;
+&lt;/div&gt; &lt;/li&gt;
+&lt;li&gt;IP数据包格式&lt;br&gt;
+&lt;div&gt; 
+&lt;img style="border-radius: 1%; display: block;" width = "350px" height = "350px" src="/images/http/ipdata.gif" alt="1"/&gt;
+&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;TCP建立连接过程&lt;br&gt;
+&lt;div&gt; 
+&lt;img style="border-radius: 1%; display: block;" width = "350px" height = "300px" src="/images/http/tcpcnt.jpg" alt="1"/&gt;
+&lt;/div&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;原理&lt;/h3&gt;
+&lt;h4&gt;注射式攻击&lt;/h4&gt;
+&lt;p&gt;这种方式的会话劫持比中间人攻击实现起来简单一些，它不会改变会话双方的通讯流，而是在双方正常的通讯中流插入恶意数据。在注射式攻击中，需要实现两种技术：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;IP欺骗；&lt;/li&gt;
+&lt;li&gt;预测TCP序列号。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;对于IP欺骗，有两种情况需要用到：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;隐藏自己的IP地址；&lt;/li&gt;
+&lt;li&gt;利用两台机器之间的信任关系实施入侵。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;在Unix/Linux平台上，可以直接使用Socket构造IP包，在IP头中填上虚假的IP地址，但需要root权限；在Windows平台上，不能使用Winsock，需要使用Winpacp（也可以使用Libnet）。例如在Linux系统，首先打开一个Raw Socket（原始套接字），然后自己编写IP头及其他数据。
+TCP协议的注射式会话劫持，攻击者应先采用嗅探技术对目标进行监听，然后从监听到的信息中构造出正确的序列号，如果不这样，你就必须先猜测目标的ISN（初始序列号），这样无形中对会话劫持加大了难度。&lt;/p&gt;
+&lt;h4&gt;中间人攻击MITM&lt;/h4&gt;
+&lt;p&gt;要想正确的实施中间人攻击，攻击者首先需要使用ARP欺骗或DNS欺骗，将会话双方的通讯流暗中改变，而这种改变对于会话双方来说是一个完全透明的代理，可以得到一切想知道的信息，甚至是利用一些有缺陷的加密协议来实现。 &lt;/p&gt;
+&lt;h3&gt;libnet&lt;/h3&gt;
+&lt;p&gt;libnet是一个开源的接口函数库，主要用C语言实现，提供了底层网络数据包的构造、处理和发送功能。&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;tips&lt;/code&gt; 实际实现过程中，会用libpcap进行监控，用libnet进行构造数据包&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;libnet主要流程
+&lt;div&gt; 
+&lt;img style="border-radius: 1%; display: block;" width = "400px" height = "260px" src="/images/http/libnet.png" alt="1"/&gt;
+&lt;/div&gt; &lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;源码&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;下载地址: &lt;a href="http://sourceforge.net/projects/libnet-dev/"&gt;libnet&lt;/a&gt;&lt;/p&gt;
+&lt;h3&gt;DEMO部分代码&lt;/h3&gt;
+&lt;p&gt;对http会话协议报文的篡改，实现基本的302重定向功能&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;    &lt;span class="c1"&gt;//初始化libnet，每个线程一个libnet &lt;/span&gt;
+    &lt;span class="n"&gt;init_thread_libnet&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
+
+    &lt;span class="c1"&gt;//http重定向&lt;/span&gt;
+    &lt;span class="k"&gt;if&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;ip_head&lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="n"&gt;protocol&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="n"&gt;IPPROTO_TCP&lt;/span&gt; &lt;span class="o"&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class="n"&gt;tcp_head&lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="n"&gt;dest&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="n"&gt;HTTP_PORT&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+        &lt;span class="kt"&gt;u_int8_t&lt;/span&gt; &lt;span class="n"&gt;tcp_flags&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;((&lt;/span&gt;&lt;span class="k"&gt;struct&lt;/span&gt; &lt;span class="n"&gt;libnet_tcp_hdr&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="n"&gt;tcp_head&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="n"&gt;th_flags&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+
+        &lt;span class="k"&gt;if&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;tcp_flags&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="n"&gt;TH_SYN&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+            &lt;span class="nl"&gt;TODO:&lt;/span&gt; &lt;span class="err"&gt;回复一个&lt;/span&gt;&lt;span class="n"&gt;syn&lt;/span&gt; &lt;span class="n"&gt;ack&lt;/span&gt;
+        &lt;span class="p"&gt;}&lt;/span&gt;&lt;span class="k"&gt;else&lt;/span&gt; &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;tcp_flags&lt;/span&gt; &lt;span class="o"&gt;&amp;amp;&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;TH_ACK&lt;/span&gt;&lt;span class="o"&gt;|&lt;/span&gt;&lt;span class="n"&gt;TH_SYN&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+            &lt;span class="nl"&gt;TODO:&lt;/span&gt; &lt;span class="err"&gt;伪造&lt;/span&gt;&lt;span class="n"&gt;http&lt;/span&gt;&lt;span class="err"&gt;响应报文。这里是&lt;/span&gt;&lt;span class="mi"&gt;302&lt;/span&gt;&lt;span class="err"&gt;重定向&lt;/span&gt;
+        &lt;span class="p"&gt;}&lt;/span&gt;&lt;span class="k"&gt;else&lt;/span&gt; &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;tcp_flags&lt;/span&gt; &lt;span class="o"&gt;&amp;amp;&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;TH_FIN&lt;/span&gt;&lt;span class="o"&gt;|&lt;/span&gt;&lt;span class="n"&gt;TH_RST&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+            &lt;span class="nl"&gt;TODO:&lt;/span&gt; &lt;span class="err"&gt;结束链接&lt;/span&gt;
+        &lt;span class="p"&gt;}&lt;/span&gt;
+    &lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;伪造所用的http head&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nx"&gt;static&lt;/span&gt; &lt;span class="nx"&gt;u_int8_t&lt;/span&gt; &lt;span class="nx"&gt;httphead_t&lt;/span&gt;&lt;span class="err"&gt;[&lt;/span&gt;&lt;span class="cp"&gt;]&lt;/span&gt; =
+&amp;quot;HTTP/1.0 302 Found\n&amp;quot;
+&amp;quot;Location: %s\n&amp;quot;
+&amp;quot;Connection:close\n\n&amp;quot;
+&amp;quot;&lt;span class="nt"&gt;&amp;lt;html&amp;gt;&lt;/span&gt;\n\t&lt;span class="nt"&gt;&amp;lt;head&amp;gt;&lt;/span&gt;\n\t\t&lt;span class="nt"&gt;&amp;lt;meta&lt;/span&gt; &lt;span class="na"&gt;http-equiv=&lt;/span&gt;&lt;span class="s"&gt;\&amp;quot;Refresh\&amp;quot;content=\&amp;quot;0;&amp;quot;&lt;/span&gt;
+&lt;span class="err"&gt;&amp;quot;&lt;/span&gt;&lt;span class="na"&gt;url=&lt;/span&gt;&lt;span class="s"&gt;%s\&amp;quot;&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;\n\t&lt;span class="nt"&gt;&amp;lt;/head&amp;gt;&lt;/span&gt;\n&lt;span class="nt"&gt;&amp;lt;/html&amp;gt;&lt;/span&gt;\n&amp;quot;;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h3&gt;结束语&lt;/h3&gt;
+&lt;p&gt;只有在了解别人攻击手段之后，我们才能做好网络安全的防范措施。&lt;br&gt;
+后续会在研究https会话劫持技术&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">muou</dc:creator><pubDate>Tue, 12 Jan 2016 22:25:00 +0800</pubDate><guid>tag:muou55555.github.io,2016-01-12:content/articles/2016/01/12/tcphijack/</guid><category>Http</category><category>Tcp</category></item><item><title>基于python开发TerminalTool</title><link>https://muou55555.github.io/content/articles/2016/01/11/TerminalTool/</link><description>&lt;h2&gt;项目概述&lt;/h2&gt;
 &lt;p&gt;基于python语言开发，表格式终端命令菜单，会在此菜单上添加嵌入式开发中经常用到的工具类方法。目前按业务控制功能、视图、通用包进行分类。
 目前此项目已开源，开源地址访问：&lt;br /&gt;
 &lt;br&gt;&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;&lt;a href="https://github.com/muou55555/TerminalTool"&gt;https://github.com/muou55555/TerminalTool&lt;/a&gt;   &lt;/p&gt;
