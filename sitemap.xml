@@ -5,28 +5,28 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://muou55555.github.io/</loc>
-<lastmod>2016-01-13T23:36:12-00:00</lastmod>
+<lastmod>2016-01-14T21:40:20-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://muou55555.github.io/archives.html</loc>
-<lastmod>2016-01-13T23:36:12-00:00</lastmod>
+<lastmod>2016-01-14T21:40:20-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://muou55555.github.io/tags.html</loc>
-<lastmod>2016-01-13T23:36:12-00:00</lastmod>
+<lastmod>2016-01-14T21:40:20-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://muou55555.github.io/categories.html</loc>
-<lastmod>2016-01-13T23:36:12-00:00</lastmod>
+<lastmod>2016-01-14T21:40:20-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -36,6 +36,13 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <lastmod>2016-01-01T10:20:00+08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.3</priority>
+</url>
+
+<url>
+<loc>https://muou55555.github.io/content/articles/2016/01/14/markdown_math/</loc>
+<lastmod>2016-01-14T15:25:00+08:00</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.7</priority>
 </url>
 
 <url>
@@ -75,7 +82,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://muou55555.github.io/category/development/</loc>
-<lastmod>2016-01-12T22:25:00+08:06</lastmod>
+<lastmod>2016-01-14T15:25:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -90,6 +97,13 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>https://muou55555.github.io/tag/c/</loc>
 <lastmod>2016-01-11T23:00:00+08:06</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>https://muou55555.github.io/tag/markdown/</loc>
+<lastmod>2016-01-14T15:25:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -131,7 +145,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://muou55555.github.io/author/muou/</loc>
-<lastmod>2016-01-12T22:25:00+08:06</lastmod>
+<lastmod>2016-01-14T15:25:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>

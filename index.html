@@ -70,6 +70,44 @@
     <div class="row">
         <div class="col-sm-9">
             <article>
+                <h3><a href="https://muou55555.github.io/content/articles/2016/01/14/markdown_math/">Markdown中使用MathJax引擎显示数学公式</a></h3>
+                <div class="summary"><p>在工作中，我们经常会用到一些数学公式，如何把这些数学公式显示在文章中，可以利用Markdown+MathJax完成在文章中显示各种数学公式。<br>
+Markdown的语法网上有很多，这里就不做重述。<br>
+MathJax是一款运行在浏览器中的开源的数学符号渲染引擎，使用MathJax可以方便的在浏览器中显示数学公式，不需要使用图片。可以解析LaTex、MathML和ASCIIMathMl的标记语言。<br></p>
+<h3>参考资料</h3>
+<p>MathJax官网: <a href="https://www.mathjax.org/">https://www.mathjax.org/</a>  <br>
+MathJax源码: <a href="https://github.com/mathjax/">https://github.com/mathjax/</a>  <br>
+<a href="http://meta.math.stackexchange.com/questions/5020/mathjax-basic-tutorial-and-quick-reference">MathJax使用说明</a><br>
+Latex在线编辑器: <a href="http://latex.codecogs.com/eqneditor/editor.php">http://latex.codecogs.com/eqneditor/editor.php</a> <br></p>
+<h3>使用方法</h3>
+<h4>规则</h4>
+<p>显示方式分为两种，一种是行内，写在<code>\...\</code>内；另一种是行间,写在<code>$$...$$</code><br>
+<code>Tips:</code> 我试了下在markdown中写在<code>$$...$$</code>只能在一行中显示，需要在多行时显示，可以放在<code>&lt;div&gt;...&lt;/div&gt;</code>之间。<br></p>
+<h4>步骤</h4>
+<blockquote>
+<p>在文档头部加入</p>
+</blockquote>
+<div class="highlight"><pre> <span class="nt">&lt;script</span> <span class="na">type=</span><span class="s">&quot;text/javascript&quot;</span> <span class="na">src=</span><span class="s">&quot;http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default&quot;</span><span class="nt">&gt;</span>
+ <span class="nt">&lt;/script&gt;</span>
+</pre></div>
+
+
+<blockquote>
+<p>然后可以使用Latex在线编辑器进行数学公式编写，然后把结果复制到markdown中即可</p>
+</blockquote>
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script>
+
+<p>行间
+$$x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}$$
+行内 \(x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}\)</p>
+<p>行间
+$$\lim_{n \rightarrow +\infty} \frac{1}{n(n+1)}$$
+行内 \(lim_{n \rightarrow ...</p>
+                    <a class="btn btn-default btn-xs" href="https://muou55555.github.io/content/articles/2016/01/14/markdown_math/">more ...</a>
+                </div>
+            </article>
+            <hr/>
+            <article>
                 <h3><a href="https://muou55555.github.io/content/articles/2016/01/12/tcphijack/">利用libnet进行TCP会话劫持</a></h3>
                 <div class="summary"><p>会话劫持（Session Hijack）: 就是结合了嗅探以及欺骗技术在内的攻击手段。例如，在一次正常的会话过程当中，攻击者作为第三方参与到其中，他可以在正常数据包中插入恶意数据，也可以在双方的会话当中进行监听，甚至可以是代替某一方主机接管会话。</p>
                     <a class="btn btn-default btn-xs" href="https://muou55555.github.io/content/articles/2016/01/12/tcphijack/">more ...</a>
@@ -86,13 +124,6 @@ This is a draft I wrote in early 2015 and never got around to publishing. Here's
 <p>Now on to the article...</p>
 <p>The first rule of C is ...</p>
                     <a class="btn btn-default btn-xs" href="https://muou55555.github.io/content/articles/2016/01/11/howtoc/">more ...</a>
-                </div>
-            </article>
-            <hr/>
-            <article>
-                <h3><a href="https://muou55555.github.io/content/articles/2016/01/11/TerminalTool/">基于python开发TerminalTool</a></h3>
-                <div class="summary"><p>基于python语言开发，表格式终端命令菜单，会在此菜单上添加嵌入式开发中经常用到的工具类方法。目前按业务控制功能、视图、通用包进行分类。主要用到pytable和pymenu接口。目前此项目已开源，开源地址：<a href="https://github.com/muou55555/TerminalTool">https://github.com/muou55555/TerminalTool</a></p>
-                    <a class="btn btn-default btn-xs" href="https://muou55555.github.io/content/articles/2016/01/11/TerminalTool/">more ...</a>
                 </div>
             </article>
             <hr/>
@@ -145,6 +176,11 @@ This is a draft I wrote in early 2015 and never got around to publishing. Here's
                     <li class="list-group-item tag-4">
                         <a href="https://muou55555.github.io/tag/http/">
                             Http
+                        </a>
+                    </li>
+                    <li class="list-group-item tag-4">
+                        <a href="https://muou55555.github.io/tag/markdown/">
+                            Markdown
                         </a>
                     </li>
                     <li class="list-group-item tag-4">

@@ -1,5 +1,60 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>木 偶</title><link href="https://muou55555.github.io/" rel="alternate"></link><link href="https://muou55555.github.io/feeds/muou.atom.xml" rel="self"></link><id>https://muou55555.github.io/</id><updated>2016-01-12T22:25:00+08:00</updated><entry><title>利用libnet进行TCP会话劫持</title><link href="https://muou55555.github.io/content/articles/2016/01/12/tcphijack/" rel="alternate"></link><updated>2016-01-12T22:25:00+08:00</updated><author><name>muou</name></author><id>tag:muou55555.github.io,2016-01-12:content/articles/2016/01/12/tcphijack/</id><summary type="html">&lt;h3&gt;相关知识&lt;/h3&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>木 偶</title><link href="https://muou55555.github.io/" rel="alternate"></link><link href="https://muou55555.github.io/feeds/muou.atom.xml" rel="self"></link><id>https://muou55555.github.io/</id><updated>2016-01-14T15:25:00+08:00</updated><entry><title>Markdown中使用MathJax引擎显示数学公式</title><link href="https://muou55555.github.io/content/articles/2016/01/14/markdown_math/" rel="alternate"></link><updated>2016-01-14T15:25:00+08:00</updated><author><name>muou</name></author><id>tag:muou55555.github.io,2016-01-14:content/articles/2016/01/14/markdown_math/</id><summary type="html">&lt;p&gt;在工作中，我们经常会用到一些数学公式，如何把这些数学公式显示在文章中，可以利用Markdown+MathJax完成在文章中显示各种数学公式。&lt;br&gt;
+Markdown的语法网上有很多，这里就不做重述。&lt;br&gt;
+MathJax是一款运行在浏览器中的开源的数学符号渲染引擎，使用MathJax可以方便的在浏览器中显示数学公式，不需要使用图片。可以解析LaTex、MathML和ASCIIMathMl的标记语言。&lt;br&gt;&lt;/p&gt;
+&lt;h3&gt;参考资料&lt;/h3&gt;
+&lt;p&gt;MathJax官网: &lt;a href="https://www.mathjax.org/"&gt;https://www.mathjax.org/&lt;/a&gt;  &lt;br&gt;
+MathJax源码: &lt;a href="https://github.com/mathjax/"&gt;https://github.com/mathjax/&lt;/a&gt;  &lt;br&gt;
+&lt;a href="http://meta.math.stackexchange.com/questions/5020/mathjax-basic-tutorial-and-quick-reference"&gt;MathJax使用说明&lt;/a&gt;&lt;br&gt;
+Latex在线编辑器: &lt;a href="http://latex.codecogs.com/eqneditor/editor.php"&gt;http://latex.codecogs.com/eqneditor/editor.php&lt;/a&gt; &lt;br&gt;&lt;/p&gt;
+&lt;h3&gt;使用方法&lt;/h3&gt;
+&lt;h4&gt;规则&lt;/h4&gt;
+&lt;p&gt;显示方式分为两种，一种是行内，写在&lt;code&gt;\...\&lt;/code&gt;内；另一种是行间,写在&lt;code&gt;$$...$$&lt;/code&gt;&lt;br&gt;
+&lt;code&gt;Tips:&lt;/code&gt; 我试了下在markdown中写在&lt;code&gt;$$...$$&lt;/code&gt;只能在一行中显示，需要在多行时显示，可以放在&lt;code&gt;&amp;lt;div&amp;gt;...&amp;lt;/div&amp;gt;&lt;/code&gt;之间。&lt;br&gt;&lt;/p&gt;
+&lt;h4&gt;步骤&lt;/h4&gt;
+&lt;blockquote&gt;
+&lt;p&gt;在文档头部加入&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt; &lt;span class="nt"&gt;&amp;lt;script&lt;/span&gt; &lt;span class="na"&gt;type=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;text/javascript&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;src=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default&amp;quot;&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;
+ &lt;span class="nt"&gt;&amp;lt;/script&amp;gt;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;blockquote&gt;
+&lt;p&gt;然后可以使用Latex在线编辑器进行数学公式编写，然后把结果复制到markdown中即可&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"&gt;&lt;/script&gt;
+
+&lt;p&gt;行间
+$$x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}$$
+行内 \(x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}\)&lt;/p&gt;
+&lt;p&gt;行间
+$$\lim_{n \rightarrow +\infty} \frac{1}{n(n+1)}$$
+行内 \(lim_{n \rightarrow +\infty} \frac{1}{n(n+1)}\)&lt;/p&gt;
+&lt;p&gt;带括号的矩阵&lt;/p&gt;
+&lt;div&gt;
+\begin{pmatrix}
+a_{11} &amp; \cdots &amp; a_{1n}\\
+\vdots &amp; \ddots &amp; \vdots\\
+a_{m1} &amp; \cdots &amp; a_{mn}
+\end{pmatrix}
+&lt;/div&gt;
+
+&lt;div&gt;
+\begin{pmatrix}
+1&amp;0\\
+0&amp;1
+\end{pmatrix}
+&lt;/div&gt;
+
+&lt;p&gt;不带括号的&lt;/p&gt;
+&lt;div&gt;
+\begin{matrix} 
+1 &amp; x &amp; x^2 \\
+1 &amp; y &amp; y^2 \\
+1 &amp; z &amp; z^2 
+\end{matrix}
+&lt;/div&gt;</summary><category term="Markdown"></category></entry><entry><title>利用libnet进行TCP会话劫持</title><link href="https://muou55555.github.io/content/articles/2016/01/12/tcphijack/" rel="alternate"></link><updated>2016-01-12T22:25:00+08:00</updated><author><name>muou</name></author><id>tag:muou55555.github.io,2016-01-12:content/articles/2016/01/12/tcphijack/</id><summary type="html">&lt;h3&gt;相关知识&lt;/h3&gt;
 &lt;p&gt;会话劫持（Session Hijack）: 就是结合了嗅探以及欺骗技术在内的攻击手段。例如，在一次正常的会话过程当中，攻击者作为第三方参与到其中，他可以在正常数据包中插入恶意数据，也可以在双方的会话当中进行监听，甚至可以是代替某一方主机接管会话。
 &lt;br&gt;
 可以把会话劫持攻击分为两种类型:&lt;/p&gt;
