@@ -22,6 +22,7 @@ Latex在线编辑器: &lt;a href="http://latex.codecogs.com/eqneditor/editor.php
 &lt;/pre&gt;&lt;/div&gt;
 
 
+&lt;p&gt;可以把MathJax下载到本地: &lt;code&gt;git clone git://github.com/mathjax/MathJax.git&lt;/code&gt;，然后把src连接转换到本地地址。&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;然后可以使用Latex在线编辑器进行数学公式编写，然后把结果复制到markdown中即可&lt;/p&gt;
 &lt;/blockquote&gt;

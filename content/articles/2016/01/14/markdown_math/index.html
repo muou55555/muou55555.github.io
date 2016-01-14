@@ -2,8 +2,6 @@
 <html lang="zh" prefix="og: http://ogp.me/ns# fb: https://www.facebook.com/2008/fbml">
 <head>
     <title>Markdown中使用MathJax引擎显示数学公式 - 木 偶</title>
-    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script>
-    
     <!-- Using the latest rendering mode for IE -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta charset="utf-8">
@@ -16,13 +14,13 @@
 
         <meta name="author" content="muou" />
         <meta name="keywords" content="Markdown" />
-        <meta name="description" content="在工作中，我们经常会用到一些数学公式，如何把这些数学公式显示在文章中，可以利用Markdown+MathJax完成在文章中显示各种数学公式。 Markdown的语法网上有很多，这里就不做重述。 MathJax是一款运行在浏览器中的开源的数学符号渲染引擎，使用MathJax可以方便的在浏览器中显示数学公式，不需要使用图片。可以解析LaTex、MathML和ASCIIMathMl的标记语言。 参考资料 MathJax官网: https://www.mathjax.org/ MathJax源码: https://github.com/mathjax/ MathJax使用说明 Latex在线编辑器: http://latex.codecogs.com/eqneditor/editor.php 使用方法 规则 显示方式分为两种，一种是行内，写在\...\内；另一种是行间,写在$$...$$ Tips: 我试了下在markdown中写在$$...$$只能在一行中显示，需要在多行时显示，可以放在&lt;div&gt;...&lt;/div&gt;之间。 步骤 在文档头部加入 &lt;script type=&#34;text/javascript&#34; src=&#34;http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default&#34;&gt; &lt;/script&gt; 然后可以使用Latex在线编辑器进行数学公式编写，然后把结果复制到markdown中即可 行间 $$x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}$$ 行内 \(x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}\) 行间 $$\lim_{n \rightarrow +\infty} \frac{1}{n(n+1)}$$ 行内 \(lim_{n \rightarrow ..." />
+        <meta name="description" content="在工作中，我们经常会用到一些数学公式，如何把这些数学公式显示在文章中，可以利用Markdown+MathJax完成在文章中显示各种数学公式。 Markdown的语法网上有很多，这里就不做重述。 MathJax是一款运行在浏览器中的开源的数学符号渲染引擎，使用MathJax可以方便的在浏览器中显示数学公式，不需要使用图片。可以解析LaTex、MathML和ASCIIMathMl的标记语言。 参考资料 MathJax官网: https://www.mathjax.org/ MathJax源码: https://github.com/mathjax/ MathJax使用说明 Latex在线编辑器: http://latex.codecogs.com/eqneditor/editor.php 使用方法 规则 显示方式分为两种，一种是行内，写在\...\内；另一种是行间,写在$$...$$ Tips: 我试了下在markdown中写在$$...$$只能在一行中显示，需要在多行时显示，可以放在&lt;div&gt;...&lt;/div&gt;之间。 步骤 在文档头部加入 &lt;script type=&#34;text/javascript&#34; src=&#34;http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default&#34;&gt; &lt;/script&gt; 可以把MathJax下载到本地: git clone git://github.com/mathjax/MathJax.git，然后把src连接转换到本地地址。 然后可以使用Latex在线编辑器进行数学公式编写，然后把结果复制到markdown中即可 行间 $$x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}$$ 行内 \(x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}\) 行间 $$\lim_{n \rightarrow ..." />
 
         <meta property="og:site_name" content="木 偶" />
         <meta property="og:type" content="article"/>
         <meta property="og:title" content="Markdown中使用MathJax引擎显示数学公式"/>
         <meta property="og:url" content="https://muou55555.github.io/content/articles/2016/01/14/markdown_math/"/>
-        <meta property="og:description" content="在工作中，我们经常会用到一些数学公式，如何把这些数学公式显示在文章中，可以利用Markdown+MathJax完成在文章中显示各种数学公式。 Markdown的语法网上有很多，这里就不做重述。 MathJax是一款运行在浏览器中的开源的数学符号渲染引擎，使用MathJax可以方便的在浏览器中显示数学公式，不需要使用图片。可以解析LaTex、MathML和ASCIIMathMl的标记语言。 参考资料 MathJax官网: https://www.mathjax.org/ MathJax源码: https://github.com/mathjax/ MathJax使用说明 Latex在线编辑器: http://latex.codecogs.com/eqneditor/editor.php 使用方法 规则 显示方式分为两种，一种是行内，写在\...\内；另一种是行间,写在$$...$$ Tips: 我试了下在markdown中写在$$...$$只能在一行中显示，需要在多行时显示，可以放在&lt;div&gt;...&lt;/div&gt;之间。 步骤 在文档头部加入 &lt;script type=&#34;text/javascript&#34; src=&#34;http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default&#34;&gt; &lt;/script&gt; 然后可以使用Latex在线编辑器进行数学公式编写，然后把结果复制到markdown中即可 行间 $$x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}$$ 行内 \(x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}\) 行间 $$\lim_{n \rightarrow +\infty} \frac{1}{n(n+1)}$$ 行内 \(lim_{n \rightarrow ..."/>
+        <meta property="og:description" content="在工作中，我们经常会用到一些数学公式，如何把这些数学公式显示在文章中，可以利用Markdown+MathJax完成在文章中显示各种数学公式。 Markdown的语法网上有很多，这里就不做重述。 MathJax是一款运行在浏览器中的开源的数学符号渲染引擎，使用MathJax可以方便的在浏览器中显示数学公式，不需要使用图片。可以解析LaTex、MathML和ASCIIMathMl的标记语言。 参考资料 MathJax官网: https://www.mathjax.org/ MathJax源码: https://github.com/mathjax/ MathJax使用说明 Latex在线编辑器: http://latex.codecogs.com/eqneditor/editor.php 使用方法 规则 显示方式分为两种，一种是行内，写在\...\内；另一种是行间,写在$$...$$ Tips: 我试了下在markdown中写在$$...$$只能在一行中显示，需要在多行时显示，可以放在&lt;div&gt;...&lt;/div&gt;之间。 步骤 在文档头部加入 &lt;script type=&#34;text/javascript&#34; src=&#34;http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default&#34;&gt; &lt;/script&gt; 可以把MathJax下载到本地: git clone git://github.com/mathjax/MathJax.git，然后把src连接转换到本地地址。 然后可以使用Latex在线编辑器进行数学公式编写，然后把结果复制到markdown中即可 行间 $$x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}$$ 行内 \(x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}\) 行间 $$\lim_{n \rightarrow ..."/>
         <meta property="article:published_time" content="2016-01-14" />
             <meta property="article:section" content="Development" />
             <meta property="article:tag" content="Markdown" />
@@ -112,7 +110,8 @@
 	<a href="https://muou55555.github.io/tag/markdown/">Markdown</a>
     
 </footer><!-- /.post-info -->                    </div>
-                </div>                
+                </div>
+                <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script>
 
 <p>在工作中，我们经常会用到一些数学公式，如何把这些数学公式显示在文章中，可以利用Markdown+MathJax完成在文章中显示各种数学公式。<br>
 Markdown的语法网上有很多，这里就不做重述。<br>
@@ -135,6 +134,7 @@ Latex在线编辑器: <a href="http://latex.codecogs.com/eqneditor/editor.php">h
 </pre></div>
 
 
+<p>可以把MathJax下载到本地: <code>git clone git://github.com/mathjax/MathJax.git</code>，然后把src连接转换到本地地址。</p>
 <blockquote>
 <p>然后可以使用Latex在线编辑器进行数学公式编写，然后把结果复制到markdown中即可</p>
 </blockquote>
@@ -168,9 +168,6 @@ a_{m1} & \cdots & a_{mn}
 1 & z & z^2 
 \end{matrix}
 </div>
-
-
-<br>
             </div>
             <!-- /.entry-content -->
     <hr/>
