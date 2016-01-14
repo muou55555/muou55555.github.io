@@ -4,147 +4,147 @@ xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitem
 xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
-<loc>https://muou55555.github.io/</loc>
-<lastmod>2016-01-14T22:57:16-00:00</lastmod>
+<loc>https://muou55555.github.com/</loc>
+<lastmod>2016-01-14T23:25:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://muou55555.github.io/archives.html</loc>
-<lastmod>2016-01-14T22:57:16-00:00</lastmod>
+<loc>https://muou55555.github.com/archives.html</loc>
+<lastmod>2016-01-14T23:25:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://muou55555.github.io/tags.html</loc>
-<lastmod>2016-01-14T22:57:16-00:00</lastmod>
+<loc>https://muou55555.github.com/tags.html</loc>
+<lastmod>2016-01-14T23:25:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://muou55555.github.io/categories.html</loc>
-<lastmod>2016-01-14T22:57:16-00:00</lastmod>
+<loc>https://muou55555.github.com/categories.html</loc>
+<lastmod>2016-01-14T23:25:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://muou55555.github.io/content/pages/About/</loc>
+<loc>https://muou55555.github.com/content/pages/About/</loc>
 <lastmod>2016-01-01T10:20:00+08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.3</priority>
 </url>
 
 <url>
-<loc>https://muou55555.github.io/content/articles/2016/01/14/markdown_math/</loc>
+<loc>https://muou55555.github.com/content/articles/2016/01/14/markdown_math/</loc>
 <lastmod>2016-01-14T15:25:00+08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
-<loc>https://muou55555.github.io/content/articles/2016/01/12/tcphijack/</loc>
+<loc>https://muou55555.github.com/content/articles/2016/01/12/tcphijack/</loc>
 <lastmod>2016-01-12T22:25:00+08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
-<loc>https://muou55555.github.io/content/articles/2016/01/11/howtoc/</loc>
+<loc>https://muou55555.github.com/content/articles/2016/01/11/howtoc/</loc>
 <lastmod>2016-01-11T23:00:00+08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
-<loc>https://muou55555.github.io/content/articles/2016/01/11/TerminalTool/</loc>
+<loc>https://muou55555.github.com/content/articles/2016/01/11/TerminalTool/</loc>
 <lastmod>2016-01-11T15:32:00+08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
-<loc>https://muou55555.github.io/content/articles/2016/01/10/Study/</loc>
+<loc>https://muou55555.github.com/content/articles/2016/01/10/Study/</loc>
 <lastmod>2016-01-10T10:20:00+08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
-<loc>https://muou55555.github.io/content/articles/2014/12/01/gugong/</loc>
+<loc>https://muou55555.github.com/content/articles/2014/12/01/gugong/</loc>
 <lastmod>2014-12-01T13:25:00+08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
-<loc>https://muou55555.github.io/category/development/</loc>
+<loc>https://muou55555.github.com/category/development/</loc>
 <lastmod>2016-01-14T15:25:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://muou55555.github.io/category/life/</loc>
+<loc>https://muou55555.github.com/category/life/</loc>
 <lastmod>2014-12-01T13:25:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://muou55555.github.io/tag/c/</loc>
+<loc>https://muou55555.github.com/tag/c/</loc>
 <lastmod>2016-01-11T23:00:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://muou55555.github.io/tag/markdown/</loc>
+<loc>https://muou55555.github.com/tag/markdown/</loc>
 <lastmod>2016-01-14T15:25:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://muou55555.github.io/tag/http/</loc>
+<loc>https://muou55555.github.com/tag/http/</loc>
 <lastmod>2016-01-12T22:25:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://muou55555.github.io/tag/python/</loc>
+<loc>https://muou55555.github.com/tag/python/</loc>
 <lastmod>2016-01-11T15:32:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://muou55555.github.io/tag/study/</loc>
+<loc>https://muou55555.github.com/tag/study/</loc>
 <lastmod>2016-01-10T10:20:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://muou55555.github.io/tag/tcp/</loc>
+<loc>https://muou55555.github.com/tag/tcp/</loc>
 <lastmod>2016-01-12T22:25:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://muou55555.github.io/tag/travel/</loc>
+<loc>https://muou55555.github.com/tag/travel/</loc>
 <lastmod>2014-12-01T13:25:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://muou55555.github.io/author/muou/</loc>
+<loc>https://muou55555.github.com/author/muou/</loc>
 <lastmod>2016-01-14T15:25:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
