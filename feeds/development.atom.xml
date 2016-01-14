@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>木 偶</title><link href="https://muou55555.github.io/" rel="alternate"></link><link href="https://muou55555.github.io/feeds/development.atom.xml" rel="self"></link><id>https://muou55555.github.io/</id><updated>2016-01-14T15:25:00+08:00</updated><entry><title>Markdown中使用MathJax引擎显示数学公式</title><link href="https://muou55555.github.io/content/articles/2016/01/14/markdown_math/" rel="alternate"></link><updated>2016-01-14T15:25:00+08:00</updated><author><name>muou</name></author><id>tag:muou55555.github.io,2016-01-14:content/articles/2016/01/14/markdown_math/</id><summary type="html">&lt;p&gt;在工作中，我们经常会用到一些数学公式，如何把这些数学公式显示在文章中，可以利用Markdown+MathJax完成在文章中显示各种数学公式。&lt;br&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>木 偶</title><link href="https://muou55555.github.io/" rel="alternate"></link><link href="https://muou55555.github.io/feeds/development.atom.xml" rel="self"></link><id>https://muou55555.github.io/</id><updated>2016-01-14T15:25:00+08:00</updated><entry><title>Markdown中使用MathJax引擎显示数学公式</title><link href="https://muou55555.github.io/content/articles/2016/01/14/markdown_math/" rel="alternate"></link><updated>2016-01-14T15:25:00+08:00</updated><author><name>muou</name></author><id>tag:muou55555.github.io,2016-01-14:content/articles/2016/01/14/markdown_math/</id><summary type="html">&lt;script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"&gt;&lt;/script&gt;
+
+&lt;p&gt;在工作中，我们经常会用到一些数学公式，如何把这些数学公式显示在文章中，可以利用Markdown+MathJax完成在文章中显示各种数学公式。&lt;br&gt;
 Markdown的语法网上有很多，这里就不做重述。&lt;br&gt;
 MathJax是一款运行在浏览器中的开源的数学符号渲染引擎，使用MathJax可以方便的在浏览器中显示数学公式，不需要使用图片。可以解析LaTex、MathML和ASCIIMathMl的标记语言。&lt;br&gt;&lt;/p&gt;
 &lt;h3&gt;参考资料&lt;/h3&gt;
@@ -23,8 +25,6 @@ Latex在线编辑器: &lt;a href="http://latex.codecogs.com/eqneditor/editor.php
 &lt;blockquote&gt;
 &lt;p&gt;然后可以使用Latex在线编辑器进行数学公式编写，然后把结果复制到markdown中即可&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"&gt;&lt;/script&gt;
-
 &lt;p&gt;行间
 $$x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}$$
 行内 \(x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}\)&lt;/p&gt;

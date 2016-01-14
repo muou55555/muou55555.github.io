@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>木 偶</title><link>https://muou55555.github.io/</link><description>Software development and architecture blog</description><atom:link href="https://muou55555.github.io/feed/index.rss" rel="self"></atom:link><lastBuildDate>Thu, 14 Jan 2016 15:25:00 +0800</lastBuildDate><item><title>Markdown中使用MathJax引擎显示数学公式</title><link>https://muou55555.github.io/content/articles/2016/01/14/markdown_math/</link><description>&lt;p&gt;在工作中，我们经常会用到一些数学公式，如何把这些数学公式显示在文章中，可以利用Markdown+MathJax完成在文章中显示各种数学公式。&lt;br&gt;
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>木 偶</title><link>https://muou55555.github.io/</link><description>Software development and architecture blog</description><atom:link href="https://muou55555.github.io/feed/index.rss" rel="self"></atom:link><lastBuildDate>Thu, 14 Jan 2016 15:25:00 +0800</lastBuildDate><item><title>Markdown中使用MathJax引擎显示数学公式</title><link>https://muou55555.github.io/content/articles/2016/01/14/markdown_math/</link><description>&lt;script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"&gt;&lt;/script&gt;
+
+&lt;p&gt;在工作中，我们经常会用到一些数学公式，如何把这些数学公式显示在文章中，可以利用Markdown+MathJax完成在文章中显示各种数学公式。&lt;br&gt;
 Markdown的语法网上有很多，这里就不做重述。&lt;br&gt;
 MathJax是一款运行在浏览器中的开源的数学符号渲染引擎，使用MathJax可以方便的在浏览器中显示数学公式，不需要使用图片。可以解析LaTex、MathML和ASCIIMathMl的标记语言。&lt;br&gt;&lt;/p&gt;
 &lt;h3&gt;参考资料&lt;/h3&gt;
@@ -23,8 +25,6 @@ Latex在线编辑器: &lt;a href="http://latex.codecogs.com/eqneditor/editor.php
 &lt;blockquote&gt;
 &lt;p&gt;然后可以使用Latex在线编辑器进行数学公式编写，然后把结果复制到markdown中即可&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"&gt;&lt;/script&gt;
-
 &lt;p&gt;行间
 $$x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}$$
 行内 \(x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}\)&lt;/p&gt;
