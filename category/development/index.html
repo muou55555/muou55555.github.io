@@ -78,6 +78,38 @@
         <li class="active">Development</li>
     </ol>
             <article>
+                <h3><a href="https://muou55555.github.com/content/articles/2016/07/15/linux timer/">浅析 Linux 中的时间编程和实现原理[转]</a></h3>
+                <div class="summary"><h2>引子</h2>
+<p>我们都生活在时间中，但却无法去思考它。什么是时间呢？似乎这是一个永远也不能被回答的问题。然而作为一个程序员，在工作中，总有那么几次我必须思考什么是时间。比如，需要知道一段代码运行了多久；要在 log 文件中记录事件发生时的时间戳；再比如需要一个定时器以便能够定期做某些计算机操作。我发现，在计算机世界中，时间在不同场合也往往有不同的含义，让试图思考它的人感到迷茫。但值得庆幸的是，Linux 中的时间终究是可以理解的。因此我打算讨论一下有关时间的话题，尝试着深入理解 Linux 系统中 C 语言编程中的时间问题。主要内容如下：</p>
+<ul>
+<li>第 1 部分是应用程序中的时间问题。有三个方面：程序计时需要；获取当前时间；定时器。</li>
+<li>第 2 部分包括时间硬件简介和 GlibC 实现时间函数的原理。</li>
+<li>第 3 和第 4 部分是 Linux 内核对时间的支持和实现原理。</li>
+</ul>
+<p>现在开始第 1 部分，探讨应用开发中的时间编程问题。在这一部分中，所有的例子代码都在 GlibC 2.14，内核 2.6.33 的 Linux 系统下编译并验证执行过。读者如果使用低版本的 GlibC 和 Linux 内核有可能无法正确执行。</p>
+<h2>获取当前时间</h2>
+<h3>时间的获取</h3>
+<p>在程序当中, 我们经常要输出系统当前的时间，比如日志文件中的每一个事件都要记录其产生时间。在 C 语言中获取当前时间的方法有以下几种，它们所获得的时间精度从秒级到纳秒，各有所不同。</p>
+<h5>表 1. C 时间函数</h5>
+<table>
+<thead>
+<tr>
+<th><strong>function 定义</strong></th>
+<th><strong>含义</strong></th>
+<th><strong>返回值</strong></th>
+<th><strong>精度</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>time()</td>
+<td>time 函数获得从 1970 年 1 月 1 日 0 点到当前的秒数，存储在_time_t_结构之中。</td>
+<td><code>time_t ...</code></td></tr></tbody></table>
+                    <a class="btn btn-default btn-xs" href="https://muou55555.github.com/content/articles/2016/07/15/linux timer/">more ...</a>
+                </div>
+            </article>
+            <hr/>
+            <article>
                 <h3><a href="https://muou55555.github.com/content/articles/2016/01/14/markdown_math/">Markdown中使用MathJax引擎显示数学公式</a></h3>
                 <div class="summary"><script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script>
 
@@ -122,19 +154,6 @@ $$\lim_{n \rightarrow ...</p>
                 </div>
             </article>
             <hr/>
-            <article>
-                <h3><a href="https://muou55555.github.com/content/articles/2016/01/11/howtoc/">How to C in 2016</a></h3>
-                <div class="summary"><p><code>Forward link</code> <a href="https://matt.sh/howto-c">https://matt.sh/howto-c</a><br>
-This is a draft I wrote in early 2015 and never got around to publishing. Here's the mostly unpolished version because it wasn't doing anybody any good sitting in my drafts folder. The simplest change was updating year 2015 to 2016 at publication time.</p>
-<p>Feel free to submit fixes/improvements/complaints as necessary. -Matt</p>
-<p>Adrián Arroyo Calle provides a Spanish translation at ?Cómo programar en C (en 2016)?</p>
-<p>Keith Thompson provides a nice set of corrections and alternative opinions at howto-c-response.</p>
-<p>Now on to the article...</p>
-<p>The first rule of C is ...</p>
-                    <a class="btn btn-default btn-xs" href="https://muou55555.github.com/content/articles/2016/01/11/howtoc/">more ...</a>
-                </div>
-            </article>
-            <hr/>
 
         <ul class="pagination">
                 <li class="prev disabled"><a href="#">&laquo;</a></li>
@@ -176,7 +195,7 @@ This is a draft I wrote in early 2015 and never got around to publishing. Here's
 
             <li class="list-group-item"><a href="https://muou55555.github.com/tags.html"><h4><i class="fa fa-tags fa-lg"></i><span class="icon-label">Tags</span></h4></a>
                 <ul class="list-group list-inline tagcloud" id="tags">
-                    <li class="list-group-item tag-4">
+                    <li class="list-group-item tag-1">
                         <a href="https://muou55555.github.com/tag/c/">
                             C
                         </a>
@@ -184,6 +203,11 @@ This is a draft I wrote in early 2015 and never got around to publishing. Here's
                     <li class="list-group-item tag-4">
                         <a href="https://muou55555.github.com/tag/http/">
                             Http
+                        </a>
+                    </li>
+                    <li class="list-group-item tag-4">
+                        <a href="https://muou55555.github.com/tag/linux/">
+                            linux
                         </a>
                     </li>
                     <li class="list-group-item tag-4">
